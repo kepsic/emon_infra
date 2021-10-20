@@ -21,7 +21,7 @@ data "template_cloudinit_config" "config" {
 
 #create EC2 instance
 resource "aws_instance" "lampstack_web_instance" {
-  ami           = lookup(var.images, var.region)
+  ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
   key_name      = "lampstack-key"
 

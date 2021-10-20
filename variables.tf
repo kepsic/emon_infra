@@ -24,7 +24,7 @@ variable "secret_key" {
   description = "secret_key for AWS"
 }
 variable "region" {
-  default = "eu-north-1"
+  default = "eu-west-3"
 }
 variable "vpc_cidr" {
   type    = string

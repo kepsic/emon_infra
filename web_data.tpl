@@ -1,12 +1,12 @@
 echo ${aws_key} > ~/.env
 echo ${aws_secret} >> ~/.env
 sudo mkdir -p /var/www/html/
-sudo yum update -y
-sudo yum install -y httpd
-sudo service httpd start
+sudo sudo apt update
+sudo apt -y install apache2
+sudo service apache2 start
 sudo usermod -a -G apache ec2-user
 sudo chown -R ec2-user:apache /var/www
-sudo yum install -y mysql php php-mysql
+sudo sudo apt -y install php php-cli php-fpm php-json php-common php-mysql php-zip php-gd php-mbstring php-curl php-xml php-pear php-bcmath
 
 
 cat > /var/www/html/index.php << EOF
